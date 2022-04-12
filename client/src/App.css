@@ -36,3 +36,46 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.top-information,
+.bottom-information {
+  padding: 0 20px;
+}
+
+.wrapper {
+  min-height: 95vh;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 20px;
+  background-color: white;
+  z-index: 99;
+}
+
+.header_btn {
+  width: 150px;
+  height: 30px;
+  display: flex;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #fff;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn_active {
+  background-color: rgba(52, 152, 219, 0.9);
+  color: white;
+}

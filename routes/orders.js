@@ -3,6 +3,7 @@ const tracking_Numbers = require("../db/data/moc_data");
 const fetch = require("node-fetch");
 const { insertOrder, getAllOrders } = require("../db/dbMethods");
 const db = require("../db/models/index");
+const fetchInterceptor = require("../fetchInterceptor");
 
 const router = express.Router();
 
@@ -19,15 +20,9 @@ router.get("/fill_database", async (req, res) => {
 
   let numbers = Object.values(tracking_Numbers);
   // let numbers = Object.values(tracking_Numbers).slice(0, 1).join(",");
-  const response = await fetch(
+  const response = await fetchInterceptor(
     `https://api.trackingmore.com/v2/trackings/get?numbers=${numbers}`,
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        "Trackingmore-Api-Key": "",
-      },
-    }
+    "get"
   );
   // console.log({ response });
   const data = await response.json();

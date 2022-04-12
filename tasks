@@ -1,0 +1,14 @@
+- set up a MongoDB database for storing information about orders, their statuses and
+  routes
+- set up back-end connection in Node.js, and
+- a basic front-end display presenting a table with information about these orders: their
+  status, shipment date, delivery date, route.
+
+addition
+
+- Calculation of summary statistics: number of orders in the database, average time to
+  delivery, average time to delivery to a specific destination (state).
+- A method of adding additional tracking numbers to be processed by TrackingMore
+  API and added to the database,
+- A map of USA showing order routes
+- An exploratory table where you can look up information about individual orders
