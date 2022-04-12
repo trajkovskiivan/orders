@@ -4,8 +4,8 @@ const cors = require("cors");
 const dbConnection = require("./db/dbSettings");
 const controller = require("./routes");
 
-const PORT = 5000;
-const port = normalizePort(process.env.PORT || PORT);
+const PORT = 5050;
+const port = normalizePort(PORT);
 
 const app = express();
 const server = http.createServer(app);
