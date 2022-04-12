@@ -3,7 +3,7 @@ mongoose.Promise = global.Promise;
 const USERNAME = process.env.USERNAME;
 const PASSWORD = process.env.PASSWORD;
 
-const URL = `mongodb+srv://username:pass@cluster0.5m6bh.mongodb.net/artikuno?retryWrites=true&w=majority`;
+const URL = `mongodb+srv://username:password@cluster0.5m6bh.mongodb.net/artikuno?retryWrites=true&w=majority`;
 
 try {
   // Connect to the MongoDB cluster

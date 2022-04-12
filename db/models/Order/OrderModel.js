@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const NewTackInfo = newSchema({
+const NewTackInfo = new Schema({
   ActType: { type: String, default: null },
   Date: { type: String, default: null },
   StatusDescription: { type: String, default: null },
@@ -23,8 +23,8 @@ const Order = new Schema(
     created_at: { type: String, default: null },
     updated_at: { type: String, default: null },
     order_create_time: { type: String, default: null },
-    customer_email: { type: String, default: null },
-    customer_phone: { type: String, default: null },
+    customer_email: { type: [String], default: null },
+    customer_phone: { type: [String], default: null },
     title: { type: String, default: null },
     order_id: { type: String, default: null },
     comment: { type: String, default: null },
