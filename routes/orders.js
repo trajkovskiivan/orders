@@ -18,7 +18,7 @@ router.get("/", async (req, res) => {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Trackingmore-Api-Key": "pd54geui-pqrd-f6ao-u99e-whhz1lpjle0y",
+        "Trackingmore-Api-Key": "",
       },
     }
   );
