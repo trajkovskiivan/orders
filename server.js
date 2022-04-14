@@ -3,7 +3,8 @@ const http = require("http");
 const cors = require("cors");
 const dbConnection = require("./db/dbSettings");
 const controller = require("./routes");
-
+require("dotenv").config();
+// console.log(process.env);
 const PORT = 5050;
 const port = normalizePort(PORT);
 
