@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const TrackingNumber = new Schema(
   {
-    id: {
+    track_id: {
       type: String,
       required: [true, "We need a Tracking Number"],
     },

@@ -1,9 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function AppLayout({ children }) {
   const navigate = useNavigate();
   const [active, setActive] = useState(0);
+  useEffect(() => {
+    console.log("LOCATION", window.location.pathname);
+    const pathname = window.location.pathname;
+    if (pathname === "/") {
+      setActive(0);
+    }
+    if (pathname === "/stats") {
+      setActive(1);
+    }
+    if (pathname === "/new") {
+      setActive(2);
+    }
+  }, []);
   return (
     <div className="wrapper">
       <div className="header">
@@ -11,7 +24,7 @@ function AppLayout({ children }) {
           className={`header_btn ${active === 0 && `btn_active`} `}
           onClick={() => {
             setActive(0);
-            navigate("/orders");
+            navigate("/");
           }}
         >
           <p>Sessions</p>

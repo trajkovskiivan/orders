@@ -14,6 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use("/api/orders", controller.orders);
+app.use("/api/stats", controller.stats);
 
 server.listen(port, () => console.log(`Server running on port ${port}`));
 

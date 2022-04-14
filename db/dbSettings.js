@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
 
-const URL = `mongodb+srv://username:password@cluster0.5m6bh.mongodb.net/artikuno?retryWrites=true&w=majority`;
+const URL = `mongodb+srv://amin:root@cluster0.5m6bh.mongodb.net/artikuno?retryWrites=true&w=majority`;
 
 try {
   mongoose.connect(

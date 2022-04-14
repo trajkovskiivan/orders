@@ -11,7 +11,6 @@ export const fetchOrders = () => async (dispatch) => {
   try {
     const response = await axios.get(apiEndpints.FETCH_ORDERS);
     if (response?.status === 200 && response?.data) {
-      console.log({ response });
       dispatch({
         type: ORDERS_FETCH_SUCCESS,
         payload: response?.data,

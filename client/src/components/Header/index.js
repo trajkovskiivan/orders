@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 const Header = () => {
   const navigate = useNavigate();
   const [active, setActive] = useState(0);
